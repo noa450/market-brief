@@ -1,0 +1,95 @@
+# Each entry: yahoo symbol → Hebrew metadata
+# Adding an asset requires no code change — just add a row here.
+# timezone: used to filter assets whose local market is outside 9:00-17:30
+
+# --- Europe ---
+"^GDAXI":
+  name_he: "מדד הדאקס בפרנקפורט"
+  gender: m
+  category: europe
+  unit: null
+  decimals: 0
+  timezone: "Europe/Berlin"
+
+"^FCHI":
+  name_he: "מדד הקאק בפריז"
+  gender: m
+  category: europe
+  unit: null
+  decimals: 0
+  timezone: "Europe/Paris"
+
+"^FTSE":
+  name_he: "מדד הפוטסי בלונדון"
+  gender: m
+  category: europe
+  unit: null
+  decimals: 0
+  timezone: "Europe/London"
+
+"^STOXX":
+  name_he: "מדד ה-STOXX 600 הכלל-אירופי"
+  gender: m
+  category: europe
+  unit: null
+  decimals: 0
+  timezone: "Europe/Berlin"
+
+# --- US Futures ---
+"YM=F":
+  name_he: "החוזים על מדד הדאו ג'ונס"
+  gender: m
+  category: us_futures
+  unit: null
+  decimals: 0
+  timezone: "America/New_York"
+
+"ES=F":
+  name_he: "החוזים על ה-S&P 500"
+  gender: m
+  category: us_futures
+  unit: null
+  decimals: 0
+  timezone: "America/New_York"
+
+"NQ=F":
+  name_he: "החוזים על הנאסד\"ק"
+  gender: m
+  category: us_futures
+  unit: null
+  decimals: 0
+  timezone: "America/New_York"
+
+# --- Commodities ---
+"BZ=F":
+  name_he: "נפט מסוג ברנט"
+  gender: m
+  category: commodities
+  unit: "דולר לחבית"
+  decimals: 1
+  timezone: "America/New_York"
+
+"CL=F":
+  name_he: "החבית האמריקאית (WTI)"
+  gender: f
+  category: commodities
+  unit: "דולר"
+  decimals: 1
+  timezone: "America/New_York"
+
+"GC=F":
+  name_he: "הזהב"
+  gender: m
+  category: commodities
+  unit: "דולר לאונקיה"
+  decimals: 0
+  timezone: "America/New_York"
+
+# --- Crypto ---
+"BTC-USD":
+  name_he: "הביטקוין"
+  gender: m
+  category: crypto
+  unit: "דולר"
+  decimals: 0
+  timezone: null

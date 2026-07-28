@@ -1,0 +1,126 @@
+[
+  {
+    "description": "mixed day — spec reference example",
+    "input": {
+      "headline": "שווקי העולם: אופטימיות באירופה, מגמה מעורבת בחוזים בארה\"ב; הנפט והזהב יורדים",
+      "categories": [
+        {
+          "category": "europe",
+          "sentiment": "positive",
+          "quotes": [
+            {"name_he": "מדד ה-DAX בפרנקפורט", "gender": "m", "direction": "up", "intensity": "עלייה נאה, מטפס", "formatted_change": "0.7%", "formatted_last": "18,500", "unit": null},
+            {"name_he": "מדד ה-CAC בפריז", "gender": "m", "direction": "up", "intensity": "עלייה נאה, מטפס", "formatted_change": "0.6%", "formatted_last": "7,600", "unit": null},
+            {"name_he": "מדד ה-FTSE בלונדון", "gender": "m", "direction": "up", "intensity": "עלייה נאה, מטפס", "formatted_change": "0.6%", "formatted_last": "8,200", "unit": null},
+            {"name_he": "מדד ה-STOXX 600 הכלל-אירופי", "gender": "m", "direction": "up", "intensity": "עלייה קלה, מוסיף", "formatted_change": "0.4%", "formatted_last": "510", "unit": null}
+          ]
+        },
+        {
+          "category": "us_futures",
+          "sentiment": "mixed",
+          "quotes": [
+            {"name_he": "החוזים על מדד הדאו ג'ונס", "gender": "m", "direction": "up", "intensity": "עלייה קלה, מוסיף", "formatted_change": "0.3%", "formatted_last": "39,500", "unit": null},
+            {"name_he": "החוזים על ה-S&P 500", "gender": "m", "direction": "flat", "intensity": "יציב / כמעט ללא שינוי", "formatted_change": "0.1%", "formatted_last": "5,400", "unit": null},
+            {"name_he": "החוזים על הנאסד\"ק", "gender": "m", "direction": "down", "intensity": "ירידה, מאבד גובה", "formatted_change": "0.9%", "formatted_last": "18,800", "unit": null}
+          ]
+        },
+        {
+          "category": "commodities",
+          "sentiment": "negative",
+          "quotes": [
+            {"name_he": "נפט מסוג ברנט", "gender": "m", "direction": "down", "intensity": "ירידה חדה, צניחה", "formatted_change": "2.8%", "formatted_last": "85.9", "unit": "דולר לחבית"},
+            {"name_he": "החבית האמריקאית (WTI)", "gender": "f", "direction": "down", "intensity": "ירידה חדה, צניחה", "formatted_change": "2.5%", "formatted_last": "80.5", "unit": "דולר"},
+            {"name_he": "הגז הטבעי", "gender": "m", "direction": "down", "intensity": "קפיצה, זינוק", "formatted_change": "1.7%", "formatted_last": "2.15", "unit": null},
+            {"name_he": "הזהב", "gender": "m", "direction": "down", "intensity": "ירידה, מאבד גובה", "formatted_change": "1.3%", "formatted_last": "4,024", "unit": "דולר לאונקיה"}
+          ]
+        },
+        {
+          "category": "crypto",
+          "sentiment": "negative",
+          "quotes": [
+            {"name_he": "הביטקוין", "gender": "m", "direction": "down", "intensity": "ירידה חדה, צניחה", "formatted_change": "2.5%", "formatted_last": "63,268", "unit": "דולר"}
+          ]
+        }
+      ]
+    },
+    "output": "שווקי העולם: אופטימיות באירופה, מגמה מעורבת בחוזים בארה\"ב; הנפט והזהב יורדים\n\nאירופה ירוקה: המסחר בבורסות היבשת מתנהל בעליות שערים נאות. מדד ה-DAX בפרנקפורט מוביל את המגמה עם קפיצה של כ-0.7%, מדד ה-CAC בפריז ומדד ה-FTSE בלונדון מטפסים בכ-0.6% כל אחד, ומדד ה-STOXX 600 הכלל-אירופי מוסיף כ-0.4%.\n\nוול סטריט (חוזים עתידיים): בשווקים בארה\"ב מסתמנת מגמה מעורבת לקראת פתיחת המסחר. החוזים על מדד הדאו ג'ונס מטפסים בכ-0.3%, בעוד החוזים על ה-S&P 500 נסוגים קלות בכ-0.1%. הלחץ מורגש בעיקר בסקטור הטכנולוגיה, כאשר החוזים על הנאסד\"ק מאבדים כ-0.9%.\n\nסחורות ואנרגיה: מחירי הנפט רושמים ירידות חדות — נפט מסוג ברנט יורד בכ-2.8% למחיר של כ-85.9 דולר לחבית, והחבית האמריקאית (WTI) מאבדת כ-2.5% ל-80.5 דולר. הגז הטבעי נסוג בכ-1.7%. גם הזהב נחלש בכ-1.3% ונסחר סביב רמה של 4,024 דולר לאונקיה.\n\nקריפטו: הביטקוין מאבד גובה ונסוג בכ-2.5%, כשהוא נסחר סביב רמה של 63,268 דולר."
+  },
+  {
+    "description": "bullish day — broad rally across all categories",
+    "input": {
+      "headline": "שווקי העולם: אופטימיות באירופה, אופטימיות בחוזים בארה\"ב, אופטימיות בסחורות, אופטימיות בקריפטו",
+      "categories": [
+        {
+          "category": "europe",
+          "sentiment": "positive",
+          "quotes": [
+            {"name_he": "מדד ה-DAX בפרנקפורט", "gender": "m", "direction": "up", "intensity": "קפיצה, זינוק", "formatted_change": "1.8%", "formatted_last": "19,200", "unit": null},
+            {"name_he": "מדד ה-CAC בפריז", "gender": "m", "direction": "up", "intensity": "קפיצה, זינוק", "formatted_change": "1.5%", "formatted_last": "7,850", "unit": null},
+            {"name_he": "מדד ה-FTSE בלונדון", "gender": "m", "direction": "up", "intensity": "עלייה נאה, מטפס", "formatted_change": "1.2%", "formatted_last": "8,400", "unit": null},
+            {"name_he": "מדד ה-STOXX 600 הכלל-אירופי", "gender": "m", "direction": "up", "intensity": "עלייה נאה, מטפס", "formatted_change": "1.0%", "formatted_last": "520", "unit": null}
+          ]
+        },
+        {
+          "category": "us_futures",
+          "sentiment": "positive",
+          "quotes": [
+            {"name_he": "החוזים על מדד הדאו ג'ונס", "gender": "m", "direction": "up", "intensity": "עלייה נאה, מטפס", "formatted_change": "0.8%", "formatted_last": "40,200", "unit": null},
+            {"name_he": "החוזים על ה-S&P 500", "gender": "m", "direction": "up", "intensity": "עלייה נאה, מטפס", "formatted_change": "0.9%", "formatted_last": "5,550", "unit": null},
+            {"name_he": "החוזים על הנאסד\"ק", "gender": "m", "direction": "up", "intensity": "קפיצה, זינוק", "formatted_change": "1.5%", "formatted_last": "19,400", "unit": null}
+          ]
+        },
+        {
+          "category": "commodities",
+          "sentiment": "positive",
+          "quotes": [
+            {"name_he": "נפט מסוג ברנט", "gender": "m", "direction": "up", "intensity": "עלייה נאה, מטפס", "formatted_change": "0.9%", "formatted_last": "88.5", "unit": "דולר לחבית"},
+            {"name_he": "הזהב", "gender": "m", "direction": "up", "intensity": "עלייה קלה, מוסיף", "formatted_change": "0.3%", "formatted_last": "4,080", "unit": "דולר לאונקיה"}
+          ]
+        },
+        {
+          "category": "crypto",
+          "sentiment": "positive",
+          "quotes": [
+            {"name_he": "הביטקוין", "gender": "m", "direction": "up", "intensity": "קפיצה, זינוק", "formatted_change": "2.1%", "formatted_last": "67,500", "unit": "דולר"}
+          ]
+        }
+      ]
+    },
+    "output": "שווקי העולם: אופטימיות באירופה, אופטימיות בחוזים בארה\"ב, אופטימיות בסחורות, אופטימיות בקריפטו\n\nאירופה ירוקה: הבורסות ביבשת פותחות את היום בעליות חדות. מדד ה-DAX בפרנקפורט זינק בכ-1.8%, מדד ה-CAC בפריז קפץ בכ-1.5%, מדד ה-FTSE בלונדון מטפס בכ-1.2% ומדד ה-STOXX 600 הכלל-אירופי מוסיף כ-1.0%.\n\nוול סטריט (חוזים עתידיים): החוזים בארה\"ב מצביעים על פתיחה חיובית. החוזים על מדד הדאו ג'ונס מטפסים בכ-0.8%, החוזים על ה-S&P 500 עולים בכ-0.9%, והחוזים על הנאסד\"ק מובילים עם קפיצה של כ-1.5%.\n\nסחורות ואנרגיה: נפט מסוג ברנט מטפס בכ-0.9% לרמה של כ-88.5 דולר לחבית. הזהב מוסיף כ-0.3% ונסחר סביב כ-4,080 דולר לאונקיה.\n\nקריפטו: הביטקוין קופץ בכ-2.1% ונסחר ברמה של כ-67,500 דולר."
+  },
+  {
+    "description": "bearish day — broad sell-off",
+    "input": {
+      "headline": "שווקי העולם: פסימיות באירופה, פסימיות בחוזים בארה\"ב, פסימיות בסחורות; מדד ה-DAX בפרנקפורט יורד, החוזים על הנאסד\"ק יורד",
+      "categories": [
+        {
+          "category": "europe",
+          "sentiment": "negative",
+          "quotes": [
+            {"name_he": "מדד ה-DAX בפרנקפורט", "gender": "m", "direction": "down", "intensity": "קפיצה, זינוק", "formatted_change": "2.1%", "formatted_last": "17,800", "unit": null},
+            {"name_he": "מדד ה-CAC בפריז", "gender": "m", "direction": "down", "intensity": "קפיצה, זינוק", "formatted_change": "1.9%", "formatted_last": "7,300", "unit": null},
+            {"name_he": "מדד ה-FTSE בלונדון", "gender": "m", "direction": "down", "intensity": "ירידה, מאבד גובה", "formatted_change": "1.4%", "formatted_last": "7,900", "unit": null},
+            {"name_he": "מדד ה-STOXX 600 הכלל-אירופי", "gender": "m", "direction": "down", "intensity": "ירידה, מאבד גובה", "formatted_change": "1.2%", "formatted_last": "495", "unit": null}
+          ]
+        },
+        {
+          "category": "us_futures",
+          "sentiment": "negative",
+          "quotes": [
+            {"name_he": "החוזים על מדד הדאו ג'ונס", "gender": "m", "direction": "down", "intensity": "ירידה, מאבד גובה", "formatted_change": "1.1%", "formatted_last": "38,200", "unit": null},
+            {"name_he": "החוזים על ה-S&P 500", "gender": "m", "direction": "down", "intensity": "ירידה, מאבד גובה", "formatted_change": "1.3%", "formatted_last": "5,200", "unit": null},
+            {"name_he": "החוזים על הנאסד\"ק", "gender": "m", "direction": "down", "intensity": "קפיצה, זינוק", "formatted_change": "2.0%", "formatted_last": "18,100", "unit": null}
+          ]
+        },
+        {
+          "category": "commodities",
+          "sentiment": "negative",
+          "quotes": [
+            {"name_he": "נפט מסוג ברנט", "gender": "m", "direction": "down", "intensity": "ירידה חדה, צניחה", "formatted_change": "3.2%", "formatted_last": "82.1", "unit": "דולר לחבית"},
+            {"name_he": "הזהב", "gender": "m", "direction": "down", "intensity": "ירידה קלה, נסוג קלות", "formatted_change": "0.4%", "formatted_last": "3,980", "unit": "דולר לאונקיה"}
+          ]
+        }
+      ]
+    },
+    "output": "שווקי העולם: פסימיות באירופה, פסימיות בחוזים בארה\"ב, פסימיות בסחורות; מדד ה-DAX בפרנקפורט יורד, החוזים על הנאסד\"ק יורד\n\nאירופה אדומה: הבורסות ביבשת נסחרות בירידות חדות. מדד ה-DAX בפרנקפורט צונח בכ-2.1%, מדד ה-CAC בפריז מאבד כ-1.9%, מדד ה-FTSE בלונדון יורד בכ-1.4% ומדד ה-STOXX 600 הכלל-אירופי נסוג בכ-1.2%.\n\nוול סטריט (חוזים עתידיים): החוזים בארה\"ב מצביעים על פתיחה שלילית. החוזים על מדד הדאו ג'ונס מאבדים כ-1.1%, החוזים על ה-S&P 500 יורדים בכ-1.3%, והחוזים על הנאסד\"ק נסוגים בכ-2.0%.\n\nסחורות ואנרגיה: נפט מסוג ברנט צונח בכ-3.2% למחיר של כ-82.1 דולר לחבית. הזהב נסוג קלות בכ-0.4% ונסחר סביב רמה של כ-3,980 דולר לאונקיה."
+  }
+]
