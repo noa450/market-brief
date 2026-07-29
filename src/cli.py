@@ -69,6 +69,14 @@ def publish_brief(brief_text: str, project_root: Path) -> None:
     index_path = docs_dir / "index.html"
     index_path.write_text(rendered, encoding="utf-8")
 
+    # Configure git user if not set (needed in CI)
+    result = subprocess.run(
+        ["git", "config", "user.name"], cwd=project_root, capture_output=True, text=True,
+    )
+    if not result.stdout.strip():
+        subprocess.run(["git", "config", "user.name", "github-actions"], cwd=project_root, check=True)
+        subprocess.run(["git", "config", "user.email", "actions@github.com"], cwd=project_root, check=True)
+
     # Git commit and push
     subprocess.run(["git", "add", "docs/index.html"], cwd=project_root, check=True)
     subprocess.run(
@@ -169,17 +177,34 @@ def main(argv: list[str] | None = None) -> int:
         and israel_time <= datetime.strptime("17:25", "%H:%M").time()
     )
 
+    # Check if US market is open (Mon-Fri 9:30-16:00 New York time)
+    ny_now = now_utc.astimezone(ZoneInfo("America/New_York"))
+    ny_time = ny_now.time()
+    ny_weekday = ny_now.weekday()  # 0=Mon ... 4=Fri
+    us_market_open = (
+        ny_weekday in (0, 1, 2, 3, 4)
+        and ny_time >= datetime.strptime("09:30", "%H:%M").time()
+        and ny_time <= datetime.strptime("16:00", "%H:%M").time()
+    )
+
     open_symbols = []
     for sym, cfg in symbols_config.items():
         tz_name = cfg.get("timezone")
         category = cfg.get("category")
 
-        # US futures: only show when TASE is closed
+        # US futures: only show when US market is closed
         if category == "us_futures":
-            if tase_open:
-                _log.info("Skipping %s — TASE is open, hiding pre-market", sym)
+            if us_market_open:
+                _log.info("Skipping %s — US market is open, hiding futures", sym)
                 continue
-            # When TASE is closed, include US futures regardless of US local time
+            open_symbols.append(sym)
+            continue
+
+        # US indices: only show when US market is open
+        if category == "us":
+            if not us_market_open:
+                _log.info("Skipping %s — US market is closed", sym)
+                continue
             open_symbols.append(sym)
             continue
 
