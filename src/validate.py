@@ -126,11 +126,10 @@ def _find_nearest_direction(text: str, asset_pos: int) -> str | None:
 
     Searches in a window around the asset position.
     """
-    # Search within ~150 chars after the asset name (same sentence / clause)
-    window_after = text[asset_pos:asset_pos + 200]
-    # Also check a small window before (verb might precede)
-    window_before = text[max(0, asset_pos - 100):asset_pos]
-    window = window_before + window_after
+    # Search only after the asset name (the verb always follows the subject in Hebrew briefs)
+    window_after = text[asset_pos:asset_pos + 80]
+    window_before = ""
+    window = window_after
 
     best_direction = None
     best_distance = float("inf")

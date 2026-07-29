@@ -49,7 +49,7 @@ def annotate_quote(quote: Quote) -> AnnotatedQuote:
 
 # ---------- 6.2  Category sentiment ----------
 
-CATEGORY_ORDER = ["europe", "us_futures", "commodities", "crypto"]
+CATEGORY_ORDER = ["europe", "us", "us_futures", "commodities", "crypto"]
 
 
 def classify_sentiment(quotes: list[Quote]) -> str:
@@ -85,6 +85,7 @@ def classify_sentiment(quotes: list[Quote]) -> str:
 
 CATEGORY_LABELS = {
     "europe": "באירופה",
+    "us": "בוול סטריט",
     "us_futures": "בחוזים בארה\"ב",
     "commodities": "בסחורות",
     "crypto": "בקריפטו",

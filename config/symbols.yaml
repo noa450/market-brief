@@ -60,6 +60,31 @@
   decimals: 0
   timezone: "America/New_York"
 
+# --- US Market ---
+"^DJI":
+  name_he: "מדד הדאו ג'ונס"
+  gender: m
+  category: us
+  unit: null
+  decimals: 0
+  timezone: "America/New_York"
+
+"^GSPC":
+  name_he: "מדד ה-S&P 500"
+  gender: m
+  category: us
+  unit: null
+  decimals: 0
+  timezone: "America/New_York"
+
+"^IXIC":
+  name_he: "מדד הנאסד\"ק"
+  gender: m
+  category: us
+  unit: null
+  decimals: 0
+  timezone: "America/New_York"
+
 # --- Commodities ---
 "BZ=F":
   name_he: "נפט מסוג ברנט"
